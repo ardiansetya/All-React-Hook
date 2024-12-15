@@ -1,14 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import UseReducer from './pages/UseReducer.jsx'
+import UseState from './pages/UseState.jsx'
+import UseEffect from './pages/UseEffect.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <UseState/>
   },
   {
     path: "/use-reducer",
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/use-effect",
-    element: <App/>
+    element: <UseEffect/>
   },
   
 ])
@@ -24,6 +26,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
-    
   </StrictMode>,
 )

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-function App() {
+function UseState() {
   const [count, setCount] = useState(0)
 
   const increment = () => {
@@ -36,4 +36,4 @@ function App() {
   );
 }
 
-export default App
+export default UseState
