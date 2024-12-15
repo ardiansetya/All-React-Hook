@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import UseReducer from './pages/UseReducer.jsx'
 import UseState from './pages/UseState.jsx'
 import UseEffect from './pages/UseEffect.jsx'
+import UseRef from './pages/UseRef.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/use-effect",
     element: <UseEffect/>
+  },
+  {
+    path: "/use-ref",
+    element: <UseRef/>
   },
   
 ])
