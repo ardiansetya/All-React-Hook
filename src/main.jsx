@@ -1,35 +1,39 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import UseReducer from './pages/UseReducer.jsx'
-import UseState from './pages/UseState.jsx'
-import UseEffect from './pages/UseEffect.jsx'
-import UseRef from './pages/UseRef.jsx'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import UseReducer from "./pages/UseReducer.jsx";
+import UseState from "./pages/UseState.jsx";
+import UseEffect from "./pages/UseEffect.jsx";
+import UseRef from "./pages/UseRef.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <UseState/>
+    element: <Dashboard />,
+  },
+  {
+    path: "/use-state",
+    element: <UseState />,
   },
   {
     path: "/use-reducer",
-    element: <UseReducer/>
+    element: <UseReducer />,
   },
   {
     path: "/use-effect",
-    element: <UseEffect/>
+    element: <UseEffect />,
   },
   {
     path: "/use-ref",
-    element: <UseRef/>
+    element: <UseRef />,
   },
-  
-])
+]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);
